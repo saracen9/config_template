@@ -7,6 +7,7 @@ import yaml
 import os
 
 
+
 # Global variable
 SETTINGS = None
 
@@ -27,7 +28,6 @@ def reload_settings():
     global SETTINGS
     try:
         # Load standard settings
-        # Use a namespace from argparse so we can use dot notation for sanity's sake ...
         settings_dict = yaml.load(file(os.path.join(this_dir, 'settings.yml')))
 
         # Overwrite the standard settings and stores local / secret settings
